@@ -1,4 +1,4 @@
-package com.example.demo
+package ru.kotlix.frame.state
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class FrameStateApplication
 
 fun main(args: Array<String>) {
-	runApplication<FrameStateApplication>(*args)
+    runApplication<FrameStateApplication>(*args)
 }

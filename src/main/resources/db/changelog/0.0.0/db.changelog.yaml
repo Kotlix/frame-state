@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/0.0.0/db.changelog.yaml
+  - changeSet:
+      id: KTX-9.1
+      author: AMGureev
+      changes:
+        - tagDatabase:
+            tag: 0.0.0
