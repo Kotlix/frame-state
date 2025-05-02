@@ -47,6 +47,11 @@ subprojects {
 			mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
 			mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
 		}
+
+		dependencies {
+			val springDocVersion: String by project
+			dependency("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springDocVersion")
+		}
 	}
 
 	repositories {
