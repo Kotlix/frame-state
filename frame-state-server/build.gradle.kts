@@ -1,8 +1,7 @@
 dependencies {
     api(project(":frame-state-api"))
-//    val frameAuthVersion: String by project
-//    implementation("ru.kotlix:frame-auth-client-starter:$frameAuthVersion")
-    // WILL BE LATER
+
+    runtimeOnly("org.springdoc:springdoc-openapi-starter-webmvc-ui")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.liquibase:liquibase-core")
@@ -12,12 +11,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-rest")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
-//    implementation("org.springframework.boot:spring-boot-starter-security")
-    // WILL BE LATER
     implementation("org.liquibase:liquibase-core")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
 
-    implementation("org.postgresql:postgresql")
+    runtimeOnly("org.postgresql:postgresql")
 }
