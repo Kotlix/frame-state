@@ -3,6 +3,8 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 dependencies {
     api(project(":frame-state-api"))
 
+    implementation("ru.kotlix:frame-voice-client-starter")
+
     runtimeOnly("org.springdoc:springdoc-openapi-starter-webmvc-ui")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
