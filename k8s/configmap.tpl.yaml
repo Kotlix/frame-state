@@ -15,3 +15,9 @@ data:
         username: ${DB_USER}
         password: ${DB_PASSWORD}
         driver-class-name: org.postgresql.Driver
+      cloud:
+        openfeign:
+          client:
+            config:
+              frame-voice-client:
+                url: http://frame-voice:8080
