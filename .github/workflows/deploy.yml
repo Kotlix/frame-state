@@ -12,6 +12,8 @@ on:
         required: false
         type: string
 env:
+  GITHUB_ACTOR: ${{ github.actor }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # K8S essential
   KTX_JAR_PATH: ./frame-state-server/build/libs/*.jar
   KTX_APP_NAME: 'frame-state'
