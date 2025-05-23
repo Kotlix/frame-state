@@ -1,9 +1,7 @@
 package ru.kotlix.frame.state.service
 
 import feign.FeignException
-import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
-import org.springframework.web.server.ResponseStatusException
 import ru.kotlix.frame.state.exception.NotFoundException
 import ru.kotlix.frame.state.repository.UserStateRepository
 import ru.kotlix.frame.state.service.dto.UserState
@@ -35,11 +33,7 @@ class UserStateServiceImpl(
                     userId = userId,
                 ),
             )
-        } catch (ex: FeignException) {
-            throw ResponseStatusException(
-                HttpStatus.valueOf(ex.status()),
-                ex.contentUTF8() ?: ex.message,
-            )
+        } catch (ignored: FeignException.NotFound) {
         }
     }
 }
